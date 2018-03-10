@@ -4,6 +4,8 @@ This is the Kotlin equivalent of this [java template project](https://github.com
 
 It makes use of
 * Kotlin
+* JUnit 5
+* Kotlin Script Gradle or Gradle Kotlin DSL
 
 ## Tips
 This was only tested with IntelliJ.
