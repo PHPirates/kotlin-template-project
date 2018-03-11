@@ -12,6 +12,8 @@ application {
 
 dependencies {
     compile(kotlin("stdlib"))
+    // To "prevent strange errors".
+    compile(kotlin("reflect"))
 
     // Built-in Kotlin test framework.
     testCompile("io.kotlintest:kotlintest:2.0.7")
