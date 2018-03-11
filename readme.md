@@ -6,6 +6,8 @@ It makes use of
 * Kotlin
 * JUnit 5
 * Kotlin Script Gradle or Gradle Kotlin DSL
+There are tests using
+* kotlintest
 
 ## Tips
 This was only tested with IntelliJ.
