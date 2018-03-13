@@ -54,6 +54,12 @@ dependencies {
 
     // Kotlintests are not run anyway when using JUnit 5 as well.
     testCompile("io.kotlintest:kotlintest:2.0.7")
+
+    // JavaFX tests using TestFX
+    testCompile("org.testfx:testfx-core:4.0.12-alpha")
+    testCompile("org.testfx:testfx-junit:4.0.12-alpha")
+    // Only needed for headless testing.
+//    testCompile("org.testfx:openjfx-monocle:8u76-b04") // jdk-9+181 for Java 9
 }
 
 repositories {
