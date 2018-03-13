@@ -32,7 +32,7 @@ class KotlinJUnitTestFXTest : FxRobot() {
 
         val progressIndicator = ProgressIndicator()
 
-        assertFalse(helloJavaFX.setLoading(progressIndicator))
+        assertTrue(helloJavaFX.setLoading(progressIndicator))
 
     }
 

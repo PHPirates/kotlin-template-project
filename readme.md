@@ -8,6 +8,8 @@ It makes use of
 There are tests using
 * kotlintest (will not be run by Gradle when using JUnit 5 as well)
 * JUnit 5
+* TestFX (for using JavaFX elements)
+* Spek
 
 ## Tips
 This was only tested with IntelliJ.

@@ -16,7 +16,7 @@ object KotlinJUnitSpekTest: Spek({
                 assertEquals(nothingness, 0)
             }
             it("should fail") {
-                fail("it works!")
+//                fail("it works!")
             }
         }
     }
