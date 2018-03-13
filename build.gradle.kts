@@ -64,15 +64,6 @@ dependencies {
     // Spek
     testCompile("org.jetbrains.spek:spek-api:1.1.5")
     testRuntime("org.jetbrains.spek:spek-junit-platform-engine:1.1.5")
-    // Spek uses older version of Kotlin
-//    testCompile("org.jetbrains.kotlin:kotlin-reflect:$kotlin_version")
-//    testCompile("org.jetbrains.spek:spek-api:1.1.5") {
-//        exclude(group(kotlin))
-//    }
-//    testRuntime ('org.jetbrains.spek:spek-junit-platform-engine:1.1.5') {
-//        exclude group: 'org.junit.platform'
-//        exclude group: 'org.jetbrains.kotlin'
-//    }
 }
 
 repositories {

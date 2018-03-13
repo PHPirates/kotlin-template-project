@@ -2,6 +2,7 @@ package nl.deltadak.ktemplate
 
 
 import javafx.scene.control.ProgressIndicator
+import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Test
 import org.testfx.api.FxRobot
 import org.testfx.api.FxToolkit
@@ -31,7 +32,7 @@ class KotlinJUnitTestFXTest : FxRobot() {
 
         val progressIndicator = ProgressIndicator()
 
-        assertTrue(helloJavaFX.setLoading(progressIndicator))
+        assertFalse(helloJavaFX.setLoading(progressIndicator))
 
     }
 
