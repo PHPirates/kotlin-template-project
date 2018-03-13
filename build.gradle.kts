@@ -40,6 +40,9 @@ dependencies {
     compile(kotlin("stdlib"))
     // To "prevent strange errors".
     compile(kotlin("reflect"))
+    // Kotlin reflection.
+    compile(kotlin("test"))
+    compile(kotlin("test-junit"))
 
     // Built-in Kotlin test framework.
     testCompile("io.kotlintest:kotlintest:2.0.7")
