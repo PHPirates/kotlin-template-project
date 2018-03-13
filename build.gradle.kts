@@ -3,6 +3,8 @@ import org.junit.platform.gradle.plugin.JUnitPlatformExtension
 group = "deltadak"
 version = "0.0"
 
+// Latest version as of 2018-03-13: JUnit 5.1.0 = Platform 1.1.0 + Jupiter 5.1.0 + Vintage 5.1.0
+
 // JUnit 5
 buildscript {
     repositories {
@@ -10,7 +12,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath("org.junit.platform:junit-platform-gradle-plugin:1.0.0-M4")
+        classpath("org.junit.platform:junit-platform-gradle-plugin:1.1.0")
     }
 }
 
@@ -46,10 +48,12 @@ dependencies {
     testCompile("io.kotlintest:kotlintest:2.0.7")
 
     // JUnit 5
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.0.0-M4")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.0.0-M4")
-    testRuntime("org.junit.platform:junit-platform-console:1.0.0-M4")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.1.0")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.1.0")
+    testRuntime("org.junit.platform:junit-platform-console:1.1.0")
 
+    // Kotlintests are not run anyway when using JUnit 5 as well.
+    testCompile("io.kotlintest:kotlintest:2.0.7")
 }
 
 repositories {
