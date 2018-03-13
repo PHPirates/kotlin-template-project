@@ -25,20 +25,11 @@ apply {
     plugin("org.junit.platform.gradle.plugin")
 }
 
-// Spek configuration
-//configure<JUnitPlatformExtension> {
-//    filters {
-//        engines {
-//            include("spek")
-//        }
-//    }
-//}
-
 // Kotlin configuration.
 plugins {
     application
     kotlin("jvm") version "1.2.30"
-    java
+    java // Required by at least JUnit.
 }
 
 application {
