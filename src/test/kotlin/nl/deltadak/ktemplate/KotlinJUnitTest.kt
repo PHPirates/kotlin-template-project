@@ -8,7 +8,7 @@ class KotlinJUnitTest {
     @Test
     fun testKotlinJUnit() {
         val helloWorld = HelloKotlin()
-        assertEquals(2, helloWorld.calculate(), "message")
+        assertEquals(3, helloWorld.calculate(), "message")
     }
 
 }
