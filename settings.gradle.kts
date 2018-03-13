@@ -1,1 +1,1 @@
-rootProject.name = "java-template-project"
+rootProject.name = "kotlin-template-project"

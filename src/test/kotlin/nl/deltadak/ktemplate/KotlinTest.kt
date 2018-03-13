@@ -13,7 +13,7 @@ class KotlinTest: FunSpec() {
     }
 
     fun testCalculate() = test("one plus one is two") {
-        HelloKotlin().calculate() shouldBe exactly(2.0)
+        HelloKotlin().calculate() shouldBe exactly(3.0)
     }
 
 }
