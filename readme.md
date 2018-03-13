@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/PHPirates/kotlin-template-project.svg?branch=master)](https://travis-ci.org/PHPirates/kotlin-template-project)
+
 # Template project for simple use cases of Gradle
 
 This is the Kotlin equivalent of this [java template project](https://github.com/PHPirates/java-template-project).
@@ -5,6 +7,7 @@ This is the Kotlin equivalent of this [java template project](https://github.com
 It makes use of
 * Kotlin
 * Kotlin Script Gradle or Gradle Kotlin DSL
+
 There are tests using
 * kotlintest (will not be run by Gradle when using JUnit 5 as well)
 * JUnit 5
