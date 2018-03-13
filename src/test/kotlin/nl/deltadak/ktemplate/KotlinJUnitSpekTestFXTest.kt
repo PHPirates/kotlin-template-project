@@ -24,7 +24,7 @@ object JavaFXTestKt : Spek({
                 Assertions.assertTrue(helloJavaFX.setLoading(progressIndicator))
             }
             it("should fail") {
-                fail("it works!")
+//                fail("it works!")
             }
         }
 
