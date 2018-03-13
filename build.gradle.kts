@@ -1,3 +1,7 @@
+import org.gradle.api.plugins.ExtensionAware
+
+import org.junit.platform.gradle.plugin.FiltersExtension
+import org.junit.platform.gradle.plugin.EnginesExtension
 import org.junit.platform.gradle.plugin.JUnitPlatformExtension
 
 group = "deltadak"
@@ -10,6 +14,7 @@ buildscript {
     repositories {
         mavenCentral()
         jcenter()
+        maven { url = uri("https://dl.bintray.com/jetbrains/spek") }
     }
     dependencies {
         classpath("org.junit.platform:junit-platform-gradle-plugin:1.1.0")
@@ -20,10 +25,11 @@ apply {
     plugin("org.junit.platform.gradle.plugin")
 }
 
-//extensions.getByType(JUnitPlatformExtension::class.java).apply {
+// Spek configuration
+//configure<JUnitPlatformExtension> {
 //    filters {
 //        engines {
-//            include("junit-jupiter")
+//            include("spek")
 //        }
 //    }
 //}
@@ -60,6 +66,19 @@ dependencies {
     testCompile("org.testfx:testfx-junit:4.0.12-alpha")
     // Only needed for headless testing.
 //    testCompile("org.testfx:openjfx-monocle:8u76-b04") // jdk-9+181 for Java 9
+
+    // Spek
+    testCompile("org.jetbrains.spek:spek-api:1.1.5")
+    testRuntime("org.jetbrains.spek:spek-junit-platform-engine:1.1.5")
+    // Spek uses older version of Kotlin
+//    testCompile("org.jetbrains.kotlin:kotlin-reflect:$kotlin_version")
+//    testCompile("org.jetbrains.spek:spek-api:1.1.5") {
+//        exclude(group(kotlin))
+//    }
+//    testRuntime ('org.jetbrains.spek:spek-junit-platform-engine:1.1.5') {
+//        exclude group: 'org.junit.platform'
+//        exclude group: 'org.jetbrains.kotlin'
+//    }
 }
 
 repositories {
