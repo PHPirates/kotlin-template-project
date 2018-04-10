@@ -1,6 +1,3 @@
-notifications:
-    email: false
-
 # Config file to set up TestFX correctly.
 # Adapted from https://github.com/TestFX/TestFX/wiki/Travis-CI
 
