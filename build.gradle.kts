@@ -12,9 +12,9 @@ version = "0.0"
 // JUnit 5
 buildscript {
     repositories {
+        maven { url = uri("https://dl.bintray.com/jetbrains/spek") }
         mavenCentral()
         jcenter()
-        maven { url = uri("https://dl.bintray.com/jetbrains/spek") }
     }
     dependencies {
         classpath("org.junit.platform:junit-platform-gradle-plugin:1.1.1")
