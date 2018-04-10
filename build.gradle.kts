@@ -68,5 +68,7 @@ dependencies {
 }
 
 repositories {
+    maven { url = uri("https://dl.bintray.com/jetbrains/spek") }
+    mavenCentral()
     jcenter()
 }
