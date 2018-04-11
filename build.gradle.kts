@@ -27,8 +27,11 @@ apply {
 
 // Kotlin configuration.
 plugins {
+
+    val kotlinVersion = "1.2.31"
+
     application
-    kotlin("jvm") version "1.2.31"
+    kotlin("jvm") version kotlinVersion
     java // Required by at least JUnit.
     // Plugin which checks for dependency updates with help/dependencyUpdates task.
     id("com.github.ben-manes.versions") version "0.17.0"
