@@ -69,7 +69,7 @@ dependencies {
 
     // Spek
     testCompile("org.jetbrains.spek:spek-api:1.1.19")
-    testRuntime("org.jetbrains.spek:spek-junit-platform-engine:1.1.19")
+    testRuntime("org.jetbrains.spek:spek-junit-platform-engine:1.1.5")
 }
 
 repositories {
