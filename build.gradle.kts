@@ -28,7 +28,7 @@ apply {
 // Kotlin configuration.
 plugins {
 
-    val kotlinVersion = "1.2.31"
+    val kotlinVersion = "1.2.40"
 
     application
     kotlin("jvm") version kotlinVersion
