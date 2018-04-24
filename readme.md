@@ -25,6 +25,8 @@ This was only tested with IntelliJ.
 
 * If you see all gradle keywords greyed out you may want to link the Gradle project in IntelliJ, if you do not see a popup asking you to then go to modules - import module and select your build.gradle.
 
+Feel free to use GitHub emojis as for example by [François Parmentier](https://gist.github.com/parmentf/035de27d6ed1dce0b36a).
+
 ## Corresponding SO questions
 [Run JUnit 5 with Gradle](https://stackoverflow.com/questions/44429751/how-to-use-junit-5-with-gradle)
 
