@@ -19,11 +19,13 @@ There are tests using
 ## Tips
 This was only tested with IntelliJ.
 
-* You can quickly import the project into IntelliJ by importing the `build.gradle` file.
+* You can quickly import the project into IntelliJ by importing the `build.gradle.kts` file. Select the Gradle wrapper if needed.
 
-* You can run `gradlew test` on the terminal to run the tests via gradle with the gradle wrapper (so you don't have to first install gradle locally by hand).
+* To run Gradle tasks, e.g. to run all tests (the verification/check task) or to start the main class (application/run) open the Gradle toolbar on the right and double-click (or right-click and debug) the task.
 
-* If you see all gradle keywords greyed out you may want to link the Gradle project in IntelliJ, if you do not see a popup asking you to then go to modules - import module and select your build.gradle.
+* Alternatively, without IntelliJ, you can run `gradlew test` on the terminal to run the tests via gradle with the gradle wrapper (so you don't have to first install gradle locally by hand).
+
+* If you see all gradle keywords greyed out you may want to link the Gradle project in IntelliJ, if you do not see a popup asking you to do so then go to modules - import module and select your `build.gradle.kts`.
 
 Feel free to use GitHub emojis as for example by [François Parmentier](https://gist.github.com/parmentf/035de27d6ed1dce0b36a).
 
