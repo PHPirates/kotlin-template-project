@@ -17,7 +17,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath("org.junit.platform:junit-platform-gradle-plugin:1.2.0-RC1")
+        classpath("org.junit.platform:junit-platform-gradle-plugin:1.2.0")
     }
 }
 
@@ -28,15 +28,23 @@ apply {
 // Kotlin configuration.
 plugins {
 
-    val kotlinVersion = "1.2.40"
+    val kotlinVersion = "1.2.41"
 
     application
     kotlin("jvm") version kotlinVersion
     java // Required by at least JUnit.
+
     // Plugin which checks for dependency updates with help/dependencyUpdates task.
     id("com.github.ben-manes.versions") version "0.17.0"
+
     // Plugin which can update Gradle dependencies, use help/useLatestVersions
     id("se.patrikerdes.use-latest-versions") version "0.2.1"
+
+    // Test coverage
+    jacoco
+
+    // Upload jacoco coverage reports to coveralls
+    id("com.github.kt3k.coveralls") version "2.8.2"
 }
 
 application {
@@ -52,14 +60,14 @@ dependencies {
     compile(kotlin("test-junit"))
 
     // JUnit 5
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.2.0-RC1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.2.0-RC1")
-    testRuntime("org.junit.platform:junit-platform-console:1.2.0-RC1")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.2.0")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.2.0")
+    testRuntime("org.junit.platform:junit-platform-console:1.2.0")
 
     // Kotlintests are not run anyway when using JUnit 5 as well.
-    testCompile("io.kotlintest:kotlintest-core:3.1.0-RC1")
-    testCompile("io.kotlintest:kotlintest-assertions:3.1.0-RC1")
-    testCompile("io.kotlintest:kotlintest-runner-junit5:3.1.0-RC1")
+    testCompile("io.kotlintest:kotlintest-core:3.1.0-RC2")
+    testCompile("io.kotlintest:kotlintest-assertions:3.1.0-RC2")
+    testCompile("io.kotlintest:kotlintest-runner-junit5:3.1.0-RC2")
 
     // JavaFX tests using TestFX
     testCompile("org.testfx:testfx-core:4.0.13-alpha")
@@ -75,5 +83,29 @@ dependencies {
 repositories {
     maven { url = uri("https://dl.bintray.com/jetbrains/spek") }
     mavenCentral()
+    mavenLocal()
     jcenter()
+}
+
+// Test coverage reporting. Just freestyling into something that seems to work.
+tasks {
+    // Enable xml for coveralls.
+    "jacocoTestReport"(JacocoReport::class) {
+        reports {
+            html.isEnabled = true
+            xml.isEnabled = true
+            xml.destination = file("$buildDir/reports/jacoco/test/jacocoTestReport.xml")
+        }
+
+    }
+
+    // Trying to run tests every time.
+    val test by tasks
+    val cleanTest by tasks
+    test.dependsOn(cleanTest)
+
+//    "test"(Test::class) {
+//        useJUnitPlatform()
+//    }
+
 }
