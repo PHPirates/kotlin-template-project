@@ -1,28 +1,17 @@
 import org.gradle.api.plugins.ExtensionAware
 
-import org.junit.platform.gradle.plugin.FiltersExtension
-import org.junit.platform.gradle.plugin.EnginesExtension
-import org.junit.platform.gradle.plugin.JUnitPlatformExtension
-
 group = "deltadak"
 version = "0.0"
 
 // Latest version as of 2018-03-13: JUnit 5.1.0 = Platform 1.1.0 + Jupiter 5.1.0 + Vintage 5.1.0
 
-// JUnit 5
+// Spek still requirest the buildscript block because of maven issues.
 buildscript {
     repositories {
         maven { url = uri("https://dl.bintray.com/jetbrains/spek") }
         mavenCentral()
         jcenter()
     }
-    dependencies {
-        classpath("org.junit.platform:junit-platform-gradle-plugin:1.2.0")
-    }
-}
-
-apply {
-    plugin("org.junit.platform.gradle.plugin")
 }
 
 // Kotlin configuration.
@@ -104,8 +93,11 @@ tasks {
     val cleanTest by tasks
     test.dependsOn(cleanTest)
 
-//    "test"(Test::class) {
-//        useJUnitPlatform()
-//    }
+    // Use the built-in JUnit support of Gradle.
+    "test"(Test::class) {
+        useJUnitPlatform()
+    }
 
+    // Sorry, I have no idea.
+    Unit
 }
