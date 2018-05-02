@@ -93,7 +93,10 @@ tasks {
 
     coveralls {
         sourceDirs.add("src/main/kotlin")
+        sourceDirs.add("$buildDir/../src/main/kotlin")
+        sourceDirs.add("$buildDir/classes/kotlin/main/nl/deltadak/ktemplate")
 
+        // Just in case the coveralls plugin gets confused again.
         jacocoReportPath = "$buildDir/reports/jacoco/test/jacocoTestReport.xml"
     }
 
