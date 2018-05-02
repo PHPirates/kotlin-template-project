@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/PHPirates/kotlin-template-project.svg?branch=master)](https://travis-ci.org/PHPirates/kotlin-template-project)
+[![Coverage Status](https://coveralls.io/repos/github/PHPirates/kotlin-template-project/badge.svg?branch=master)](https://coveralls.io/github/PHPirates/kotlin-template-project?branch=master)
 
 # Template project for simple use cases of Gradle
 
@@ -9,6 +10,8 @@ This is the Kotlin equivalent of this (older) [java template project](https://gi
 It makes use of
 * Kotlin
 * Kotlin Script Gradle or Gradle Kotlin DSL
+* JaCoCo for generating test reports
+* Coveralls which takes the JaCoCo report and shows some statistics
 
 There are tests using
 * kotlintest (will be run by Gradle since kotlintest 3)
