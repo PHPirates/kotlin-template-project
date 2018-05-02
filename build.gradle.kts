@@ -1,5 +1,3 @@
-import org.gradle.api.plugins.ExtensionAware
-
 group = "deltadak"
 version = "0.0"
 
@@ -14,7 +12,6 @@ buildscript {
     }
 }
 
-// Kotlin configuration.
 plugins {
 
     val kotlinVersion = "1.2.41"
@@ -53,7 +50,7 @@ dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.2.0")
     testRuntime("org.junit.platform:junit-platform-console:1.2.0")
 
-    // Kotlintests are not run anyway when using JUnit 5 as well.
+    // Kotlintest
     testCompile("io.kotlintest:kotlintest-core:3.1.0-RC2")
     testCompile("io.kotlintest:kotlintest-assertions:3.1.0-RC2")
     testCompile("io.kotlintest:kotlintest-runner-junit5:3.1.0-RC2")
