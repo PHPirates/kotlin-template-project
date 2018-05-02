@@ -92,7 +92,8 @@ tasks {
     }
 
     coveralls {
-//        sourceDirs += ["""src/main/kotlin"""].toMutableList()
+        sourceDirs.add("src/main/kotlin")
+
         jacocoReportPath = "$buildDir/reports/jacoco/test/jacocoTestReport.xml"
     }
 
