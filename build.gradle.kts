@@ -3,15 +3,6 @@ version = "0.0"
 
 // Latest version as of 2018-03-13: JUnit 5.1.0 = Platform 1.1.0 + Jupiter 5.1.0 + Vintage 5.1.0
 
-// Spek still requirest the buildscript block because of maven issues.
-buildscript {
-    repositories {
-        maven { url = uri("https://dl.bintray.com/jetbrains/spek") }
-        mavenCentral()
-        jcenter()
-    }
-}
-
 plugins {
 
     val kotlinVersion = "1.2.41"
@@ -67,7 +58,6 @@ dependencies {
 }
 
 repositories {
-    maven { url = uri("https://dl.bintray.com/jetbrains/spek") }
     mavenCentral()
     mavenLocal()
     jcenter()
