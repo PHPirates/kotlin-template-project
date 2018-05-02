@@ -78,7 +78,9 @@ tasks {
     // Enable xml for coveralls.
     "jacocoTestReport"(JacocoReport::class) {
         reports {
+            // To be read by humans
             html.isEnabled = true
+            // To be read by Coveralls etc.
             xml.isEnabled = true
             xml.destination = file("$buildDir/reports/jacoco/test/jacocoTestReport.xml")
         }
