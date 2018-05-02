@@ -1,3 +1,6 @@
+import org.gradle.kotlin.dsl.resolver.buildSrcSourceRootsFilePath
+import org.kt3k.gradle.plugin.coveralls.CoverallsTask
+
 group = "deltadak"
 version = "0.0"
 
@@ -74,6 +77,7 @@ tasks {
             xml.isEnabled = true
             xml.destination = file("$buildDir/reports/jacoco/test/jacocoTestReport.xml")
         }
+//        additionalSourceDirs(["src/main/kotlin"])
 
     }
 
@@ -86,6 +90,18 @@ tasks {
     "test"(Test::class) {
         useJUnitPlatform()
     }
+
+    coveralls {
+//        sourceDirs += ["""src/main/kotlin"""].toMutableList()
+        jacocoReportPath = "$buildDir/reports/jacoco/test/jacocoTestReport.xml"
+    }
+
+//    "coveralls"(CoverallsTask::class) {
+
+
+//        sourceReportFactoryMap[file(project(":main").reporting.baseDir.path + "/reports/jacoco/test/jacocoTestReport.xml").absolutePath] = temporaryDirFactory.
+
+//    }
 
     // Sorry, I have no idea.
     Unit
