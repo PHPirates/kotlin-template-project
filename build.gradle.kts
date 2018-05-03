@@ -66,6 +66,10 @@ repositories {
     jcenter()
 }
 
+apply {
+    from("auxiliary.gradle")
+}
+
 // Test coverage reporting. Just freestyling into something that seems to work.
 tasks {
     // Enable xml for coveralls.
@@ -91,14 +95,14 @@ tasks {
         useJUnitPlatform()
     }
 
-    coveralls {
-        sourceDirs.add("src/main/kotlin")
-        sourceDirs.add("$buildDir/../src/main/kotlin")
-        sourceDirs.add("$buildDir/classes/kotlin/main/nl/deltadak/ktemplate")
-
-        // Just in case the coveralls plugin gets confused again.
-        jacocoReportPath = "$buildDir/reports/jacoco/test/jacocoTestReport.xml"
-    }
+//    coveralls {
+//        sourceDirs.add("src/main/kotlin")
+//        sourceDirs.add("$buildDir/../src/main/kotlin")
+//        sourceDirs.add("$buildDir/classes/kotlin/main/nl/deltadak/ktemplate")
+//
+//        // Just in case the coveralls plugin gets confused again.
+//        jacocoReportPath = "$buildDir/reports/jacoco/test/jacocoTestReport.xml"
+//    }
 
 //    "coveralls"(CoverallsTask::class) {
 

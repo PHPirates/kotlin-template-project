@@ -1,0 +1,5 @@
+coveralls {
+//    sourceDirs = allprojects.sourceSets.main.allSource.srcDirs.flatten()
+    sourceDirs += ['src/main/kotlin']
+    jacocoReportPath = "${buildDir}/reports/jacoco/test/jacocoTestReport.xml"
+}
