@@ -4,7 +4,7 @@ coveralls {
     project.extensions.coveralls.sourceDirs += project.sourceSets.main.kotlin.srcDirs
     sourceDirs += ['src/main/kotlin']
     jacocoReportPath = "${buildDir}/reports/jacoco/test/jacocoTestReport.xml"
-    doLast {
-        println("I am auxiliary.")
-    }
+//    doLast {
+//        println("I am auxiliary.")
+//    }
 }
