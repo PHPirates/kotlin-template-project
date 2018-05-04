@@ -9,7 +9,8 @@ This is the Kotlin equivalent of this (older) [java template project](https://gi
 
 It makes use of
 * Kotlin
-* Kotlin Script Gradle or Gradle Kotlin DSL
+* Kotlin Script Gradle or Gradle Kotlin DSL 
+* A normal, Groovy Gradle build file is also present
 * JaCoCo for generating test reports
 * Coveralls which takes the JaCoCo report and shows some statistics
 
