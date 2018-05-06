@@ -56,11 +56,11 @@ jacocoTestReport {
     }
 }
 
-//coveralls {
-//    sourceDirs += allprojects.sourceSets.main.allSource.srcDirs.flatten()
-//    sourceDirs += files(sourceSets.main.kotlin.srcDirs).files.absolutePath
-//    project.extensions.coveralls.sourceDirs += project.sourceSets.main.kotlin.srcDirs
-//    sourceDirs += ['src/main/kotlin']
-//    jacocoReportPath = 'build/reports/jacoco/test/jacocoTestReport.xml'
-//
-//}
+coveralls {
+    sourceDirs += allprojects.sourceSets.main.allSource.srcDirs.flatten()
+    sourceDirs += files(sourceSets.main.kotlin.srcDirs).files.absolutePath
+    project.extensions.coveralls.sourceDirs += project.sourceSets.main.kotlin.srcDirs
+    sourceDirs += ['src/main/kotlin']
+    jacocoReportPath = 'build/reports/jacoco/test/jacocoTestReport.xml'
+
+}
