@@ -46,12 +46,21 @@ repositories {
     jcenter()
 }
 
-
-coveralls {
-    sourceDirs += allprojects.sourceSets.main.allSource.srcDirs.flatten()
-    sourceDirs += files(sourceSets.main.kotlin.srcDirs).files.absolutePath
-    project.extensions.coveralls.sourceDirs += project.sourceSets.main.kotlin.srcDirs
-    sourceDirs += ['src/main/kotlin']
-    jacocoReportPath = 'build/reports/jacoco/test/jacocoTestReport.xml'
-
+// Test coverage reporting
+jacocoTestReport {
+    // Enable xml for coveralls.
+    reports {
+        html.enabled = true
+        xml.enabled = true
+        xml.setDestination(file("${buildDir}/reports/jacoco/test/jacocoTestReport.xml"))
+    }
 }
+
+//coveralls {
+//    sourceDirs += allprojects.sourceSets.main.allSource.srcDirs.flatten()
+//    sourceDirs += files(sourceSets.main.kotlin.srcDirs).files.absolutePath
+//    project.extensions.coveralls.sourceDirs += project.sourceSets.main.kotlin.srcDirs
+//    sourceDirs += ['src/main/kotlin']
+//    jacocoReportPath = 'build/reports/jacoco/test/jacocoTestReport.xml'
+//
+//}
