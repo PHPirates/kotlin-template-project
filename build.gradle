@@ -67,6 +67,8 @@ jacocoTestReport {
         xml.enabled = true
         xml.setDestination(file("${buildDir}/reports/jacoco/test/jacocoTestReport.xml"))
     }
+
+    sourceSets project.sourceSets.main
 }
 
 coveralls {
