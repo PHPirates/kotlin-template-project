@@ -46,6 +46,11 @@ repositories {
     jcenter()
 }
 
+test {
+    // Always run tests, even when nothing changed.
+    dependsOn 'cleanTest'
+}
+
 // Test coverage reporting
 jacocoTestReport {
     // Enable xml for coveralls.
