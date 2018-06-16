@@ -3,6 +3,8 @@
 
 # Template project for simple use cases of Gradle
 
+> Note that both a Gradle and a Gradle Kotlin DSL build file are present.
+
 This project aims to provide an example of the use of the Gradle Kotlin DSL with some testing frameworks and libraries, since the official documentation is at the moment of writing very minimal.
 
 This is the Kotlin equivalent of this (older) [java template project](https://github.com/PHPirates/java-template-project).
