@@ -1,13 +1,13 @@
 plugins {
 
-    id 'org.jetbrains.kotlin.jvm' version '1.2.40'
+    id 'org.jetbrains.kotlin.jvm' version '1.2.50'
     id 'java' // Required by at least JUnit.
 
     // Plugin which checks for dependency updates with help/dependencyUpdates task.
-    id 'com.github.ben-manes.versions' version '0.17.0'
+    id 'com.github.ben-manes.versions' version '0.19.0'
 
     // Plugin which can update Gradle dependencies, use help/useLatestVersions
-    id 'se.patrikerdes.use-latest-versions'  version '0.2.1'
+    id 'se.patrikerdes.use-latest-versions'  version '0.2.3'
 
     // Test coverage
     id 'jacoco'
@@ -25,9 +25,9 @@ dependencies {
     testRuntime 'org.junit.platform:junit-platform-console:1.2.0'
 
     // Kotlintest
-    testCompile 'io.kotlintest:kotlintest-core:3.1.0-RC2'
-    testCompile 'io.kotlintest:kotlintest-assertions:3.1.0-RC2'
-    testCompile 'io.kotlintest:kotlintest-runner-junit5:3.1.0-RC2'
+    testCompile 'io.kotlintest:kotlintest-core:3.1.6'
+    testCompile 'io.kotlintest:kotlintest-assertions:3.1.6'
+    testCompile 'io.kotlintest:kotlintest-runner-junit5:3.1.6'
 
     // JavaFX tests using TestFX
     testCompile 'org.testfx:testfx-core:4.0.13-alpha'
@@ -77,8 +77,5 @@ coveralls {
     project.extensions.coveralls.sourceDirs += project.sourceSets.main.kotlin.srcDirs
     sourceDirs += ['src/main/kotlin']
     jacocoReportPath = 'build/reports/jacoco/test/jacocoTestReport.xml'
-
     sourceDirs += ['src/test/kotlin']
-
-
 }
