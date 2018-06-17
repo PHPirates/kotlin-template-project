@@ -75,7 +75,7 @@ coveralls {
     sourceDirs += allprojects.sourceSets.main.allSource.srcDirs.flatten()
     sourceDirs += files(sourceSets.main.kotlin.srcDirs).files.absolutePath
     project.extensions.coveralls.sourceDirs += project.sourceSets.main.kotlin.srcDirs
-    sourceDirs += ['src/main/kotlin']
-    jacocoReportPath = 'build/reports/jacoco/test/jacocoTestReport.xml'
-    sourceDirs += ['src/test/kotlin']
+    sourceDirs += ['$TRAVIS_BUILD_DIR/src/main/kotlin']
+    jacocoReportPath = '${buildDir}/reports/jacoco/test/jacocoTestReport.xml'
+    sourceDirs += ['$TRAVIS_BUILD_DIR/src/test/kotlin']
 }
