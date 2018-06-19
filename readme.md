@@ -1,5 +1,8 @@
+. | .
+ --- | ---
 [![Build Status](https://travis-ci.org/PHPirates/kotlin-template-project.svg?branch=master)](https://travis-ci.org/PHPirates/kotlin-template-project)
-[![Coverage Status](https://coveralls.io/repos/github/PHPirates/kotlin-template-project/badge.svg?branch=master)](https://coveralls.io/github/PHPirates/kotlin-template-project?branch=master)
+Coveralls | [![Coverage Status](https://coveralls.io/repos/github/PHPirates/kotlin-template-project/badge.svg?branch=master)](https://coveralls.io/github/PHPirates/kotlin-template-project?branch=master)
+Codecov | [![codecov](https://codecov.io/gh/PHPirates/kotlin-template-project/branch/master/graph/badge.svg)](https://codecov.io/gh/PHPirates/kotlin-template-project)
 
 # Template project for simple use cases of Gradle
 
@@ -39,3 +42,5 @@ Feel free to use GitHub emojis as for example by [François Parmentier](https://
 [Run JUnit 5 with Gradle](https://stackoverflow.com/questions/44429751/how-to-use-junit-5-with-gradle)
 
 [Run kotlintest and JUnit 5 tests with Gradle](https://stackoverflow.com/questions/49638462/how-to-run-kotlintest-tests-using-the-gradle-kotlin-dsl)
+
+[Upload test reports of Kotlin sources to Coveralls](https://stackoverflow.com/questions/50903389/how-to-upload-test-reports-of-kotlin-sources-to-coveralls)
