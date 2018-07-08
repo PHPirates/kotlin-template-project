@@ -23,7 +23,7 @@ There are tests using
 * kotlintest (will be run by Gradle since kotlintest 3)
 * JUnit 5
 * TestFX (for using JavaFX elements)
-* Spek
+* Spek 2
 
 ## Tips
 This was only tested with IntelliJ.
