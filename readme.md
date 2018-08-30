@@ -6,7 +6,7 @@ Codecov | [![codecov](https://codecov.io/gh/PHPirates/kotlin-template-project/br
 
 # Template project for simple use cases of Gradle
 
-> Note that both a Gradle and a Gradle Kotlin DSL build file are present.
+> Note that both a Gradle (build.gradle) and a Gradle Kotlin DSL (build.gradle.kts) build file are present.
 
 This project aims to provide an example of the use of the Gradle Kotlin DSL with some testing frameworks and libraries, since the official documentation is at the moment of writing very minimal.
 
@@ -17,7 +17,7 @@ It makes use of
 * Kotlin Script Gradle or Gradle Kotlin DSL 
 * A normal, Groovy Gradle build file is also present
 * JaCoCo for generating test reports
-* Coveralls which takes the JaCoCo report and shows some statistics
+* Codecov.io which takes the JaCoCo report and shows some statistics
 
 There are tests using
 * kotlintest (will be run by Gradle since kotlintest 3)
