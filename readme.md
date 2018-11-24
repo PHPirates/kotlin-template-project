@@ -44,3 +44,5 @@ Feel free to use GitHub emojis as for example by [François Parmentier](https://
 [Run kotlintest and JUnit 5 tests with Gradle](https://stackoverflow.com/questions/49638462/how-to-run-kotlintest-tests-using-the-gradle-kotlin-dsl)
 
 [Upload test reports of Kotlin sources to Coveralls](https://stackoverflow.com/questions/50903389/how-to-upload-test-reports-of-kotlin-sources-to-coveralls)
+
+[The DefaultSourceDirectorySet constructor has been deprecated. How to use the ObjectFactory service?](https://stackoverflow.com/questions/53461821/the-defaultsourcedirectoryset-constructor-has-been-deprecated-how-to-use-the-ob)
