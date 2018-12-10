@@ -56,8 +56,8 @@ dependencies {
 //    testCompile("org.testfx:openjfx-monocle:8u76-b04") // jdk-9+181 for Java 9
 
     // Spek
-    testCompile("org.jetbrains.spek:spek-api:1.2.1")
-    testRuntime("org.jetbrains.spek:spek-junit-platform-engine:1.2.1")
+    testCompile("org.spekframework.spek2:spek-dsl-jvm:2.0.0-rc.1")
+    testRuntime("org.spekframework.spek2:spek-runner-junit5:2.0.0-rc.1")
 }
 
 repositories {
