@@ -4,8 +4,6 @@ import org.kt3k.gradle.plugin.coveralls.CoverallsTask
 group = "deltadak"
 version = "0.0"
 
-// Latest version as of 2018-03-13: JUnit 5.1.0 = Platform 1.1.0 + Jupiter 5.1.0 + Vintage 5.1.0
-
 plugins {
 
     val kotlinVersion = "1.3.11"
@@ -66,11 +64,7 @@ repositories {
     jcenter()
 }
 
-//apply {
-//    from("auxiliary.gradle")
-//}
-
-// Test coverage reporting. Just freestyling into something that seems to work.
+// Test coverage reporting for coveralls.
 tasks {
     // Enable xml for coveralls.
     "jacocoTestReport"(JacocoReport::class) {
@@ -81,7 +75,6 @@ tasks {
             xml.isEnabled = true
             xml.destination = file("$buildDir/reports/jacoco/test/jacocoTestReport.xml")
         }
-//        additionalSourceDirs(["src/main/kotlin"])
 
     }
 
@@ -94,22 +87,6 @@ tasks {
     "test"(Test::class) {
         useJUnitPlatform()
     }
-
-//    coveralls {
-//        sourceDirs.add("src/main/kotlin")
-//        sourceDirs.add("$buildDir/../src/main/kotlin")
-//        sourceDirs.add("$buildDir/classes/kotlin/main/nl/deltadak/ktemplate")
-//
-//        // Just in case the coveralls plugin gets confused again.
-//        jacocoReportPath = "$buildDir/reports/jacoco/test/jacocoTestReport.xml"
-//    }
-
-//    "coveralls"(CoverallsTask::class) {
-
-
-//        sourceReportFactoryMap[file(project(":main").reporting.baseDir.path + "/reports/jacoco/test/jacocoTestReport.xml").absolutePath] = temporaryDirFactory.
-
-//    }
 
     // Sorry, I have no idea.
     Unit
