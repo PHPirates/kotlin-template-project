@@ -19,6 +19,8 @@ plugins {
 dependencies {
     compile 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
 
+    compile 'org.slf4j:slf4j-simple:1.8.0-beta2'
+
     // JUnit 5
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.2'
@@ -68,7 +70,7 @@ jacocoTestReport {
     reports {
         html.enabled = true
         xml.enabled = true
-        xml.setDestination(file("${buildDir}/reports/jacoco/test/jacocoTestReport.xml"))
+        xml.setDestination(file("${buildDir}/reports/jacoco/test/jacocoTestReport.xml" as Object))
     }
 
     sourceSets project.sourceSets.main
@@ -79,6 +81,6 @@ coveralls {
     sourceDirs += files(sourceSets.main.kotlin.srcDirs).files.absolutePath
     project.extensions.coveralls.sourceDirs += project.sourceSets.main.kotlin.srcDirs
     sourceDirs += ["${projectDir}/src/main/kotlin"]
-    jacocoReportPath = "${buildDir}/reports/jacoco/test/jacocoTestReport.xml"
+    jacocoReportPath = "${buildDir}/reports/jacoco/test/jacocoTestReport.xml" as Object
     sourceDirs += ["${projectDir}/src/test/kotlin"]
 }
