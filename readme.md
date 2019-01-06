@@ -9,6 +9,8 @@ Codecov | [![codecov](https://codecov.io/gh/PHPirates/kotlin-template-project/br
 > Note that both a Gradle (build.gradle) and a Gradle Kotlin DSL (build.gradle.kts) build file are present.
 
 This project aims to provide an example of the use of the Gradle Kotlin DSL with some testing frameworks and libraries, since the official documentation is at the moment of writing very minimal.
+There are both a Groovy Gradle ([`build.gradle`](build.gradle.inactive)) and a Kotlin Script Gradle ([`build.gradle.kts`](build.gradle.kts)) build file present which do roughly the same, which may make translation a bit easier.
+For other translation examples, see [below](#translations).
 
 This is the Kotlin equivalent of this (older) [java template project](https://github.com/PHPirates/java-template-project).
 
@@ -37,6 +39,30 @@ This was only tested with IntelliJ.
 * If you see all gradle keywords greyed out you may want to link the Gradle project in IntelliJ, if you do not see a popup asking you to do so then go to modules - import module and select your `build.gradle.kts`.
 
 Feel free to use GitHub emojis as for example by [François Parmentier](https://gist.github.com/parmentf/035de27d6ed1dce0b36a).
+
+## <a name="translations">Some example translations from Groovy Gradle to Kotlin Script Gradle</a>
+
+### Task configuration
+
+Groovy Gradle:
+```
+// This is a configuration for the shadowJar task.
+shadowJar{
+  classifier = 'deploy'
+}
+```
+
+Kotlin Script Gradle:
+```
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+
+tasks {
+    // This is a configuration for the shadowJar task.
+    "shadowJar"(ShadowJar::class) {
+        classifier = "deploy"
+    }
+}
+```
 
 ## Corresponding SO questions
 [Run JUnit 5 with Gradle](https://stackoverflow.com/questions/44429751/how-to-use-junit-5-with-gradle)
