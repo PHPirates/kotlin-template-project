@@ -1,6 +1,3 @@
-import org.gradle.kotlin.dsl.resolver.buildSrcSourceRootsFilePath
-import org.kt3k.gradle.plugin.coveralls.CoverallsTask
-
 group = "deltadak"
 version = "0.0"
 
@@ -38,14 +35,14 @@ dependencies {
     compile(kotlin("test-junit"))
 
     // JUnit 5
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.3.2")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.3.2")
-    testRuntime("org.junit.platform:junit-platform-console:1.3.2")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.4.0-RC2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.4.0-RC2")
+    testRuntime("org.junit.platform:junit-platform-console:1.4.0-RC2")
 
     // Kotlintest
-    testCompile("io.kotlintest:kotlintest-core:3.1.11")
-    testCompile("io.kotlintest:kotlintest-assertions:3.1.11")
-    testCompile("io.kotlintest:kotlintest-runner-junit5:3.1.11")
+    testCompile("io.kotlintest:kotlintest-core:3.2.1")
+    testCompile("io.kotlintest:kotlintest-assertions:3.2.1")
+    testCompile("io.kotlintest:kotlintest-runner-junit5:3.2.1")
 
     // JavaFX tests using TestFX
     testCompile("org.testfx:testfx-core:4.0.15-alpha")
@@ -54,8 +51,8 @@ dependencies {
 //    testCompile("org.testfx:openjfx-monocle:8u76-b04") // jdk-9+181 for Java 9
 
     // Spek
-    testCompile("org.spekframework.spek2:spek-dsl-jvm:2.0.0-rc.1")
-    testRuntime("org.spekframework.spek2:spek-runner-junit5:2.0.0-rc.1")
+    testCompile("org.spekframework.spek2:spek-dsl-jvm:2.0.0")
+    testRuntime("org.spekframework.spek2:spek-runner-junit5:2.0.0")
 }
 
 repositories {
