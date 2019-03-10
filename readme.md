@@ -37,6 +37,7 @@ Decide whether you want to use Groovy Gradle (older and widely used) or the Grad
 * Go to File | New | Module from Existing Sources and select your `build.gradle` file. Make sure 'Use gradle wrapper' is selected. Select a different Gradle JVM if prompted.
 * You should commit all the files you added, but not the generated files in `.gradle/`.
 * You can run Gradle tasks from the Gradle window on the right, for example `build` to build your project, `run` to run the main class if you have one or `check` to run tests.
+* It is recommended that you use a continuous integration service like Travis, which will build and run tests on their server when you push a commit. Install the Travis GitHub App by going to the GitHub marketplace, and after that copy the `.travis.yml`, possibly remove parts you don't need.
 
 ## Tips
 This was only tested with IntelliJ.
