@@ -4,7 +4,7 @@ Travis | [![Build Status](https://travis-ci.org/PHPirates/kotlin-template-projec
 Coveralls | [![Coverage Status](https://coveralls.io/repos/github/PHPirates/kotlin-template-project/badge.svg?branch=master)](https://coveralls.io/github/PHPirates/kotlin-template-project?branch=master)
 Codecov | [![codecov](https://codecov.io/gh/PHPirates/kotlin-template-project/branch/master/graph/badge.svg)](https://codecov.io/gh/PHPirates/kotlin-template-project)
 
-# Template project for simple use cases of Gradle
+# Template project which contains minimal examples of using Gradle
 
 > Note that both a Gradle (build.gradle) and a Gradle Kotlin DSL (build.gradle.kts) build file are present.
 
@@ -26,6 +26,17 @@ There are tests using
 * JUnit 5
 * TestFX (for using JavaFX elements)
 * Spek 2
+
+## How to add Gradle to your existing project
+
+Decide whether you want to use Groovy Gradle (older and widely used) or the Gradle Kotlin DSL (newer but no documentation and nobody uses it, yet).
+
+* Copy the `build.gradle.kts` and `settings.gradle.kts` (Gradle Kotlin DSL, as you can see from the `.kts` extension) or the `build.gradle` (Groovy Gradle, it this repo it may be named `build.gradle.inactive` but just rename it to `build.gradle`)
+* Read through the file you just copied and change the relevant names, remove things of which you are sure you don't need them
+* Copy the `gradlew`, `gradlew.bat` and `gradle/` files and folder.
+* Go to File | New | Module from Existing Sources and select your `build.gradle` file. Make sure 'Use gradle wrapper' is selected. Select a different Gradle JVM if prompted.
+* You should commit all the files you added, but not the generated files in `.gradle/`.
+* You can run Gradle tasks from the Gradle window on the right, for example `build` to build your project, `run` to run the main class if you have one or `check` to run tests.
 
 ## Tips
 This was only tested with IntelliJ.
