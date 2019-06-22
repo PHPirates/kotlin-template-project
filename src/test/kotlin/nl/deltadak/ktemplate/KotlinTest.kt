@@ -2,7 +2,7 @@
 
 package nl.deltadak.ktemplate
 
-import io.kotlintest.matchers.plusOrMinus
+import io.kotlintest.matchers.doubles.plusOrMinus
 import io.kotlintest.shouldBe
 import io.kotlintest.specs.FunSpec
 
