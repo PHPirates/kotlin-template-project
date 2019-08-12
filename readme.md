@@ -27,6 +27,8 @@ There are tests using
 * TestFX (for using JavaFX elements)
 * Spek 2
 
+Note you have to install JavaFX properly, making sure you install one for the Java version you are using (e.g. on Arch Linux, install `jre8-openjdk jdk8-openjdk java8-openjfx`).
+
 ## How to add Gradle to your existing project
 
 Decide whether you want to use Groovy Gradle (older and widely used) or the Gradle Kotlin DSL (newer but no documentation and nobody uses it, yet).
