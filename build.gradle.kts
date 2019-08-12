@@ -10,10 +10,10 @@ plugins {
     java // Required by at least JUnit.
 
     // Plugin which checks for dependency updates with help/dependencyUpdates task.
-    id("com.github.ben-manes.versions") version "0.21.0"
+    id("com.github.ben-manes.versions") version "0.22.0"
 
     // Plugin which can update Gradle dependencies, use help/useLatestVersions
-    id("se.patrikerdes.use-latest-versions") version "0.2.10"
+    id("se.patrikerdes.use-latest-versions") version "0.2.12"
 
     // Test coverage
     jacoco
@@ -35,24 +35,24 @@ dependencies {
     compile(kotlin("test-junit"))
 
     // JUnit 5
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.5.0-RC2")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.5.0-RC2")
-    testRuntime("org.junit.platform:junit-platform-console:1.5.0-RC2")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.5.1")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.5.1")
+    testRuntime("org.junit.platform:junit-platform-console:1.5.1")
 
     // Kotlintest
-    testCompile("io.kotlintest:kotlintest-core:3.3.2")
-    testCompile("io.kotlintest:kotlintest-assertions:3.3.2")
-    testCompile("io.kotlintest:kotlintest-runner-junit5:3.3.2")
+    testCompile("io.kotlintest:kotlintest-core:3.4.0")
+    testCompile("io.kotlintest:kotlintest-assertions:3.4.0")
+    testCompile("io.kotlintest:kotlintest-runner-junit5:3.4.0")
 
     // JavaFX tests using TestFX
-    testCompile("org.testfx:testfx-core:4.0.15-alpha")
-    testCompile("org.testfx:testfx-junit:4.0.15-alpha")
+    testCompile("org.testfx:testfx-core:4.0.16-alpha")
+    testCompile("org.testfx:testfx-junit:4.0.16-alpha")
     // Only needed for headless testing.
 //    testCompile("org.testfx:openjfx-monocle:8u76-b04") // jdk-9+181 for Java 9
 
     // Spek
-    testCompile("org.spekframework.spek2:spek-dsl-jvm:2.0.5")
-    testRuntime("org.spekframework.spek2:spek-runner-junit5:2.0.5")
+    testCompile("org.spekframework.spek2:spek-dsl-jvm:2.0.6")
+    testRuntime("org.spekframework.spek2:spek-runner-junit5:2.0.6")
 }
 
 repositories {
