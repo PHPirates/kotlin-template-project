@@ -2,6 +2,7 @@
 # Adapted from https://github.com/TestFX/TestFX/wiki/Travis-CI
 
 # NOTE When updating, update https://stackoverflow.com/a/49116679/4126843 too
+# and the one from java-template-project
 
 language: java
 
