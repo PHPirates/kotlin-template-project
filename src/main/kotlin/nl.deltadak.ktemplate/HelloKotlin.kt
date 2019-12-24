@@ -12,14 +12,11 @@ class HelloKotlin {
     fun calculate(): Int {
         return 1 + 1
     }
-
 }
 
 /**
  * Run HelloKotlin.
  */
-fun main(args: Array<String>) {
+fun main() {
     println(HelloKotlin().calculate())
 }
-
-
