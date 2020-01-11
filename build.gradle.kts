@@ -19,7 +19,7 @@ plugins {
     jacoco
 
     // Upload jacoco coverage reports to coveralls
-    id("com.github.kt3k.coveralls") version "2.8.4"
+    id("com.github.kt3k.coveralls") version "2.9.0"
 }
 
 application {
@@ -35,9 +35,9 @@ dependencies {
     implementation(kotlin("test-junit"))
 
     // JUnit 5
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0-M1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.6.0-M1")
-    testRuntimeOnly("org.junit.platform:junit-platform-console:1.6.0-M1")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0-RC1")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.6.0-RC1")
+    testRuntimeOnly("org.junit.platform:junit-platform-console:1.6.0-RC1")
 
     // Kotlintest
     testImplementation("io.kotlintest:kotlintest-core:3.4.2")
@@ -48,11 +48,11 @@ dependencies {
     testImplementation("org.testfx:testfx-core:4.0.16-alpha")
     testImplementation("org.testfx:testfx-junit:4.0.16-alpha")
     // Only needed for headless testing.
-//    testCompile("org.testfx:openjfx-monocle:8u76-b04") // jdk-9+181 for Java 9
+//    testImplementation("org.testfx:openjfx-monocle:8u76-b04") // jdk-9+181 for Java 9
 
     // Spek
-    testImplementation("org.spekframework.spek2:spek-dsl-jvm:2.0.8")
-    testImplementation("org.spekframework.spek2:spek-runner-junit5:2.0.8")
+    testImplementation("org.spekframework.spek2:spek-dsl-jvm:2.0.9")
+    testImplementation("org.spekframework.spek2:spek-runner-junit5:2.0.9")
 }
 
 repositories {
