@@ -35,9 +35,9 @@ dependencies {
     implementation(kotlin("test-junit"))
 
     // JUnit 5
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0-RC1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.6.0-RC1")
-    testRuntimeOnly("org.junit.platform:junit-platform-console:1.6.0-RC1")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.6.0")
+    testRuntimeOnly("org.junit.platform:junit-platform-console:1.6.0")
 
     // Kotlintest
     testImplementation("io.kotlintest:kotlintest-core:3.4.2")
