@@ -10,7 +10,7 @@ plugins {
     java // Required by at least JUnit.
 
     // Plugin which checks for dependency updates with help/dependencyUpdates task.
-    id("com.github.ben-manes.versions") version "0.27.0"
+    id("com.github.ben-manes.versions") version "0.28.0"
 
     // Plugin which can update Gradle dependencies, use help/useLatestVersions
     id("se.patrikerdes.use-latest-versions") version "0.2.13"
@@ -19,7 +19,7 @@ plugins {
     jacoco
 
     // Upload jacoco coverage reports to coveralls
-    id("com.github.kt3k.coveralls") version "2.9.0"
+    id("com.github.kt3k.coveralls") version "2.10.1"
 }
 
 application {
@@ -35,9 +35,9 @@ dependencies {
     implementation(kotlin("test-junit"))
 
     // JUnit 5
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.6.0")
-    testRuntimeOnly("org.junit.platform:junit-platform-console:1.6.0")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.6.2")
+    testRuntimeOnly("org.junit.platform:junit-platform-console:1.6.2")
 
     // Kotlintest
     testImplementation("io.kotlintest:kotlintest-core:3.4.2")
@@ -51,8 +51,8 @@ dependencies {
 //    testImplementation("org.testfx:openjfx-monocle:8u76-b04") // jdk-9+181 for Java 9
 
     // Spek
-    testImplementation("org.spekframework.spek2:spek-dsl-jvm:2.0.9")
-    testImplementation("org.spekframework.spek2:spek-runner-junit5:2.0.9")
+    testImplementation("org.spekframework.spek2:spek-dsl-jvm:2.0.10")
+    testImplementation("org.spekframework.spek2:spek-runner-junit5:2.0.10")
 }
 
 repositories {
