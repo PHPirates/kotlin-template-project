@@ -24,7 +24,7 @@ class HelloJavaFX : Application() {
         primaryStage.title = "Hello World!"
         val btn = Button()
         btn.text = "Say 1+1"
-        btn.setOnAction { _ -> println(calculate()) }
+        btn.setOnAction { println(calculate()) }
 
         val spinner = Spinner<Int>()
 
@@ -59,7 +59,7 @@ class HelloJavaFX : Application() {
      * Start application.
      */
     fun main(args: Array<String>) {
-        Application.launch(*args)
+        launch(*args)
     }
 
 }

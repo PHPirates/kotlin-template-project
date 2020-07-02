@@ -1,7 +1,6 @@
 package nl.deltadak.ktemplate
 
 import javafx.scene.control.ProgressIndicator
-import junit.framework.TestCase.fail
 import org.junit.jupiter.api.Assertions
 import org.spekframework.spek2.Spek
 import org.spekframework.spek2.style.gherkin.Feature
