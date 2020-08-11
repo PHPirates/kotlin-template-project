@@ -12,6 +12,8 @@ jobs:
         with:
           java-version: 14
           java-package: jdk+fx
+      - name: Setup JavaFX
+        uses: GabrielBB/xvfb-action@v1.2
       - name: Run tests
         run: |
           export DISPLAY=:99.0
