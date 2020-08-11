@@ -12,8 +12,8 @@ jobs:
         with:
           java-version: 14
       - name: Run tests
+        # xvfb is only needed for JavaFX
         run: |
-          export DISPLAY=:99.0
           xvfb-run --auto-servernum ./gradlew check jacocoTestReport coveralls
 
       - name: Upload codecov report
