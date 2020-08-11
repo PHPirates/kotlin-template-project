@@ -12,9 +12,11 @@ jobs:
         with:
           java-version: 14
       - name: Run tests
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
         # xvfb is only needed for JavaFX
         run: |
-          xvfb-run --auto-servernum ./gradlew check jacocoTestReport coveralls
+          xvfb-run --auto-servernum ./gradlew check jacocoTestReport coverallsJacoco
 
       - name: Upload codecov report
         if: success()
