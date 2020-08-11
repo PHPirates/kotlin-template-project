@@ -11,7 +11,6 @@ jobs:
         uses: actions/setup-java@v1.4.1
         with:
           java-version: 14
-          java-package: jdk+fx
       - name: Run tests
         run: |
           export DISPLAY=:99.0
