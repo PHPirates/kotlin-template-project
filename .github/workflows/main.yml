@@ -12,11 +12,9 @@ jobs:
         with:
           java-version: 14
           java-package: jdk+fx
-      - name: Setup JavaFX
-        run: export DISPLAY=:99.0
-
       - name: Run tests
         run: |
+          export DISPLAY=:99.0
           ./gradlew check jacocoTestReport coveralls
 
       - name: Upload codecov report
