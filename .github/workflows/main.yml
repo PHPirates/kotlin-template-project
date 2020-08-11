@@ -13,11 +13,12 @@ jobs:
           java-version: 14
           java-package: jdk+fx
       - name: Run tests
-        uses: GabrielBB/xvfb-action@v1.2
-        with:
-          run: |
-            export DISPLAY=:99.0
-            ./gradlew check jacocoTestReport coveralls
+#        uses: GabrielBB/xvfb-action@v1.2
+#        with:
+        run: |
+          sudo apt-get install xvfb
+          export DISPLAY=:99.0
+          ./gradlew check jacocoTestReport coveralls
 
       - name: Upload codecov report
         if: success()
