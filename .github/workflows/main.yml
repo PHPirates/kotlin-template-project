@@ -15,13 +15,12 @@ jobs:
       - name: Setup JavaFX
         uses: GabrielBB/xvfb-action@v1.2
         with:
-          run: ./gradlew check
+          run: ./gradlew check jacocoTestReport coveralls
 
       - name: Run tests
         run: |
-          sudo apt-get install xvfb
           export DISPLAY=:99.0
-          ./gradlew check jacocoTestReport coveralls
+          xvfb-run --auto-servernum ./gradlew check jacocoTestReport coveralls
 
       - name: Upload codecov report
         if: success()
