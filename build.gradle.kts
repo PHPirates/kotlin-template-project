@@ -20,6 +20,8 @@ plugins {
 
     // Upload jacoco coverage reports to coveralls
     id("com.github.kt3k.coveralls") version "2.10.1"
+
+    id("org.openjfx.javafxplugin") version "0.0.8"
 }
 
 application {
