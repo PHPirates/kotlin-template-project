@@ -19,7 +19,7 @@ jobs:
 
       - name: Run tests
         run: |
-#          sudo apt-get install xvfb
+          sudo apt-get install xvfb
           export DISPLAY=:99.0
           ./gradlew check jacocoTestReport coveralls
 
