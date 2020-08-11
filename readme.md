@@ -1,5 +1,6 @@
 . | .
  --- | ---
+GitHub Actions | ![GitHub Workflow Status](https://github.com/PHPirates/kotlin-template-project/workflows/CI/badge.svg)
 Travis | [![Build Status](https://travis-ci.org/PHPirates/kotlin-template-project.svg?branch=master)](https://travis-ci.org/PHPirates/kotlin-template-project)
 Coveralls | [![Coverage Status](https://coveralls.io/repos/github/PHPirates/kotlin-template-project/badge.svg?branch=master)](https://coveralls.io/github/PHPirates/kotlin-template-project?branch=master)
 Codecov | [![codecov](https://codecov.io/gh/PHPirates/kotlin-template-project/branch/master/graph/badge.svg)](https://codecov.io/gh/PHPirates/kotlin-template-project)
