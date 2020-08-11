@@ -25,6 +25,11 @@ plugins {
     id("org.openjfx.javafxplugin") version "0.0.8"
 }
 
+javafx {
+    version = "14"
+    modules = listOf("javafx.controls")
+}
+
 application {
     mainClassName = "deltadak.HelloWorld"
 }
