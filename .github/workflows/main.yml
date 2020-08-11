@@ -12,12 +12,12 @@ jobs:
         with:
           java-version: 14
           java-package: jdk+fx
-      - name: Setup JavaFX
-        uses: GabrielBB/xvfb-action@v1.2
       - name: Run tests
-        run: |
-          export DISPLAY=:99.0
-          ./gradlew check jacocoTestReport coveralls
+        uses: GabrielBB/xvfb-action@v1.2
+        with:
+          run: |
+            export DISPLAY=:99.0
+            ./gradlew check jacocoTestReport coveralls
 
       - name: Upload codecov report
         if: success()
