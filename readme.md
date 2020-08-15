@@ -21,6 +21,7 @@ It makes use of
 * A normal, Groovy Gradle build file is also present
 * JaCoCo for generating test reports
 * Codecov.io which takes the JaCoCo report and shows some statistics
+* Coveralls.io coverage reports uploaded by the coveralls-jacoco plugin (https://github.com/nbaztec/coveralls-jacoco-gradle-plugin)
 
 There are tests using
 * kotlintest (will be run by Gradle since kotlintest 3)
