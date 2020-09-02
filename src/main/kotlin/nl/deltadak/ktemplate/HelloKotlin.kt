@@ -10,7 +10,11 @@ class HelloKotlin {
      * @return 1+1
      */
     fun calculate(): Int {
-        return 1 + 1
+        return 1 + (listOf(
+                0,
+                0,
+                1,
+        ).maxOrNull() ?: 0)
     }
 }
 
