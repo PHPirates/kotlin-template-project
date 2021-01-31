@@ -10,16 +10,16 @@ plugins {
     java // Required by at least JUnit.
 
     // Plugin which checks for dependency updates with help/dependencyUpdates task.
-    id("com.github.ben-manes.versions") version "0.29.0"
+    id("com.github.ben-manes.versions") version "0.36.0"
 
     // Plugin which can update Gradle dependencies, use help/useLatestVersions
-    id("se.patrikerdes.use-latest-versions") version "0.2.14"
+    id("se.patrikerdes.use-latest-versions") version "0.2.15"
 
     // Test coverage
     jacoco
 
     // Upload jacoco coverage reports to coveralls
-    id("com.github.nbaztec.coveralls-jacoco") version "1.1.0"
+    id("com.github.nbaztec.coveralls-jacoco") version "1.2.10"
 
     // https://openjfx.io/openjfx-docs/#gradle
     id("org.openjfx.javafxplugin") version "0.0.9"
@@ -28,10 +28,6 @@ plugins {
 javafx {
     version = "14"
     modules = listOf("javafx.controls")
-}
-
-application {
-    mainClassName = "deltadak.HelloWorld"
 }
 
 dependencies {
@@ -43,9 +39,9 @@ dependencies {
     implementation(kotlin("test-junit"))
 
     // JUnit 5
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.0-RC1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.0-RC1")
-    testRuntimeOnly("org.junit.platform:junit-platform-console:1.7.0-RC1")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.0")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.0")
+    testRuntimeOnly("org.junit.platform:junit-platform-console:1.7.0")
 
     // Kotlintest
     testImplementation("io.kotlintest:kotlintest-core:3.4.2")
@@ -59,8 +55,8 @@ dependencies {
 //    testImplementation("org.testfx:openjfx-monocle:8u76-b04") // jdk-9+181 for Java 9
 
     // Spek
-    testImplementation("org.spekframework.spek2:spek-dsl-jvm:2.0.12")
-    testImplementation("org.spekframework.spek2:spek-runner-junit5:2.0.12")
+    testImplementation("org.spekframework.spek2:spek-dsl-jvm:2.0.15")
+    testImplementation("org.spekframework.spek2:spek-runner-junit5:2.0.15")
 }
 
 repositories {
