@@ -1,5 +1,10 @@
 name: CI
-on: push
+
+# NOTE: the schedule is only for testing purposes in this repository
+on:
+  push:
+  schedule:
+    - cron: 0 0 * * 1
 
 jobs:
   build:
@@ -8,7 +13,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Setup Java JDK
-        uses: actions/setup-java@v1.4.1
+        uses: actions/setup-java@v1
         with:
           java-version: 14
       - name: Run tests
