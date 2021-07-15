@@ -10,7 +10,7 @@ Codecov | [![codecov](https://codecov.io/gh/PHPirates/kotlin-template-project/br
 > Note that both a Gradle (build.gradle) and a Gradle Kotlin DSL (build.gradle.kts) build file are present.
 
 This project aims to provide an example of the use of the Gradle Kotlin DSL with some testing frameworks and libraries, since the official documentation is at the moment of writing very minimal.
-There are both a Groovy Gradle ([`build.gradle`](build.gradle.inactive)) and a Kotlin Script Gradle ([`build.gradle.kts`](build.gradle.kts)) build file present which do roughly the same, which may make translation a bit easier.
+There are both a Groovy Gradle ([`build.gradle`](build.gradle.inactive), not updated recently) and a Kotlin Script Gradle ([`build.gradle.kts`](build.gradle.kts) updated recently) build file present which do roughly the same, which may make translation a bit easier.
 For other translation examples, see [below](#translations).
 
 This is the Kotlin equivalent of this (older) [java template project](https://github.com/PHPirates/java-template-project).
@@ -29,11 +29,11 @@ There are tests using
 * TestFX (for using JavaFX elements)
 * Spek 2
 
-Note you have to install JavaFX properly, making sure you install one for the Java version you are using (e.g. on Arch Linux, install `jre8-openjdk jdk8-openjdk java8-openjfx`).
+This uses JavaFX via gradle, so you should not have to take the trouble of getting it installed together with Java.
 
 ## How to add Gradle to your existing project
 
-Decide whether you want to use Groovy Gradle (older and widely used) or the Gradle Kotlin DSL (newer but no documentation and nobody uses it, yet).
+Decide whether you want to use Groovy Gradle (older and widely used) or the Gradle Kotlin DSL (newer and starting to be used more and more).
 
 * Copy the `build.gradle.kts` and `settings.gradle.kts` (Gradle Kotlin DSL, as you can see from the `.kts` extension) or the `build.gradle` (Groovy Gradle, it this repo it may be named `build.gradle.inactive` but just rename it to `build.gradle`)
 * Read through the file you just copied and change the relevant names, remove things of which you are sure you don't need them
