@@ -1,10 +1,6 @@
 name: CI
 
-# NOTE: the schedule is only for testing purposes in this repository
-on:
-  push:
-  schedule:
-    - cron: 0 0 * * 1
+on: push
 
 jobs:
   build:
