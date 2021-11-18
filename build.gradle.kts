@@ -3,7 +3,7 @@ version = "0.0"
 
 plugins {
 
-    val kotlinVersion = "1.5.20"
+    val kotlinVersion = "1.6.0"
 
     application
     kotlin("jvm") version kotlinVersion
@@ -20,6 +20,9 @@ plugins {
 
     // Upload jacoco coverage reports to coveralls
     id("com.github.nbaztec.coveralls-jacoco") version "1.2.13"
+
+    // New test coverage plugin
+    id("org.jetbrains.kotlinx.kover") version "0.4.2"
 
     // https://openjfx.io/openjfx-docs/#gradle
     id("org.openjfx.javafxplugin") version "0.0.10"
