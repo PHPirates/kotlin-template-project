@@ -81,16 +81,14 @@ tasks {
 
     }
 
-    // Trying to run tests every time.
-    val test by tasks
-    val cleanTest by tasks
-    test.dependsOn(cleanTest)
-
-    // Use the built-in JUnit support of Gradle.
-    "test"(Test::class) {
-        useJUnitPlatform()
-    }
-
     // Sorry, I have no idea.
     Unit
+}
+
+tasks.test {
+    // Use the built-in JUnit support of Gradle.
+    useJUnitPlatform()
+
+    // Always run tests even if nothing changed, for demonstration purposes
+    dependsOn("cleanTest")
 }
