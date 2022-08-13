@@ -68,21 +68,15 @@ repositories {
 }
 
 // Test coverage reporting for coveralls.
-tasks {
+tasks.jacocoTestReport {
     // Enable xml for coveralls.
-    "jacocoTestReport"(JacocoReport::class) {
-        reports {
-            // To be read by humans
-            html.required.set(true)
-            // To be read by Coveralls etc.
-            xml.required.set(true)
-            xml.outputLocation.set(file("$buildDir/reports/jacoco/test/jacocoTestReport.xml"))
-        }
-
+    reports {
+        // To be read by humans
+        html.required.set(true)
+        // To be read by Coveralls etc.
+        xml.required.set(true)
+        xml.outputLocation.set(file("$buildDir/reports/jacoco/test/jacocoTestReport.xml"))
     }
-
-    // Sorry, I have no idea.
-    Unit
 }
 
 tasks.test {
