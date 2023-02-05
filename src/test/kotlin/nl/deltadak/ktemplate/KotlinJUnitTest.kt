@@ -10,5 +10,4 @@ class KotlinJUnitTest {
         val helloWorld = HelloKotlin()
         assertEquals(2, helloWorld.calculate(), "message")
     }
-
 }

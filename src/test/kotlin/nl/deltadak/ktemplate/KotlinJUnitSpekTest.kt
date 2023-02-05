@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions.assertEquals
 import org.spekframework.spek2.Spek
 import org.spekframework.spek2.style.gherkin.Feature
 
-object KotlinJUnitSpekTest: Spek({
+object KotlinJUnitSpekTest : Spek({
     Feature("Empty feature") {
         Scenario("Nothing is given") {
             val something = emptyList<Nothing>()

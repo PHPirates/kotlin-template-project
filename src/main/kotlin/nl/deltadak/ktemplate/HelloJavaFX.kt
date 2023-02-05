@@ -61,7 +61,6 @@ class HelloJavaFX : Application() {
     fun main(args: Array<String>) {
         launch(*args)
     }
-
 }
 
 /**

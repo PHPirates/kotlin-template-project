@@ -6,7 +6,7 @@ import org.spekframework.spek2.Spek
 import org.spekframework.spek2.style.gherkin.Feature
 import org.testfx.api.FxToolkit
 
-object JavaFXTestKt : Spek({
+object KotlinJUnitSpekTestFXTest : Spek({
     Feature("We can use the JavaFX Toolkit") {
         Scenario("We use the Toolkit") {
             // Initialise JavaFX Toolkit, needed for things like ProgressIndicator.
@@ -36,7 +36,7 @@ object JavaFXTestKt : Spek({
 //                Assertions.assertTrue(helloJavaFX.setLoading(progressIndicator))
 //            }
 //            it("should fail") {
-////                fail("it works!")
+// //                fail("it works!")
 //            }
 //        }
 //

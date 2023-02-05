@@ -1,0 +1,5 @@
+version: "1.0"
+profile:
+  name: qodana.starter
+
+# docker run --rm -it -v /home/thomas/GitRepos/kotlin-template-project/:/data/project/ -p 8081:8080 -v /home/thomas/Downloads/qodana-results:/data/results jetbrains/qodana-jvm --show-report

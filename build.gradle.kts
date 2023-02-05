@@ -3,29 +3,35 @@ version = "0.0"
 
 plugins {
 
-    val kotlinVersion = "1.6.0"
+    val kotlinVersion = "1.8.0"
 
     application
     kotlin("jvm") version kotlinVersion
     java // Required by at least JUnit.
 
     // Plugin which checks for dependency updates with help/dependencyUpdates task.
-    id("com.github.ben-manes.versions") version "0.42.0"
+    id("com.github.ben-manes.versions") version "0.45.0"
 
     // Plugin which can update Gradle dependencies, use help/useLatestVersions
     id("se.patrikerdes.use-latest-versions") version "0.2.18"
+
+    // Kotest (previously KotlinTest)
+    id("io.kotest.multiplatform") version "5.5.4"
 
     // Test coverage
     jacoco
 
     // Upload jacoco coverage reports to coveralls
-    id("com.github.nbaztec.coveralls-jacoco") version "1.2.14"
+    id("com.github.nbaztec.coveralls-jacoco") version "1.2.15"
 
     // New test coverage plugin
-    id("org.jetbrains.kotlinx.kover") version "0.6.0-Beta"
+    id("org.jetbrains.kotlinx.kover") version "0.7.0-ALPHA"
 
     // https://openjfx.io/openjfx-docs/#gradle
     id("org.openjfx.javafxplugin") version "0.0.13"
+
+    // Linting
+    id("org.jlleitschuh.gradle.ktlint") version "11.1.0"
 }
 
 javafx {
@@ -34,22 +40,24 @@ javafx {
 }
 
 dependencies {
-    implementation(kotlin("stdlib"))
     // To "prevent strange errors".
-    implementation(kotlin("reflect"))
+    implementation(kotlin("stdlib"))
     // Kotlin reflection.
-    implementation(kotlin("test"))
-    implementation(kotlin("test-junit"))
+    implementation(kotlin("reflect"))
+
+//    implementation(kotlin("test"))
+//    implementation(kotlin("test-junit"))
 
     // JUnit 5
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.0")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.0")
-    testRuntimeOnly("org.junit.platform:junit-platform-console:1.9.0")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.2")
+    testRuntimeOnly("org.junit.platform:junit-platform-console:1.9.2")
 
     // Kotlintest
-    testImplementation("io.kotlintest:kotlintest-core:3.4.2")
-    testImplementation("io.kotlintest:kotlintest-assertions:3.4.2")
-    testImplementation("io.kotlintest:kotlintest-runner-junit5:3.4.2")
+    implementation("io.kotest:kotest-framework-engine:5.5.4")
+    implementation("io.kotest:kotest-assertions-core:5.5.4")
+    implementation("io.kotest:kotest-framework-engine-jvm:5.5.4")
+    implementation("io.kotest:kotest-runner-junit5-jvm:5.5.4")
 
     // JavaFX tests using TestFX
     testImplementation("org.testfx:testfx-core:4.0.16-alpha")
@@ -58,8 +66,8 @@ dependencies {
 //    testImplementation("org.testfx:openjfx-monocle:8u76-b04") // jdk-9+181 for Java 9
 
     // Spek
-    testImplementation("org.spekframework.spek2:spek-dsl-jvm:2.0.18")
-    testImplementation("org.spekframework.spek2:spek-runner-junit5:2.0.18")
+    testImplementation("org.spekframework.spek2:spek-dsl-jvm:2.0.19")
+    testImplementation("org.spekframework.spek2:spek-runner-junit5:2.0.19")
 }
 
 repositories {
