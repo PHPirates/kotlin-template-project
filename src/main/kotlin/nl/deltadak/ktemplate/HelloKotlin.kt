@@ -14,7 +14,7 @@ class HelloKotlin {
             listOf(
                 0,
                 0,
-                1,
+                1
             ).maxOrNull() ?: 0
             )
     }

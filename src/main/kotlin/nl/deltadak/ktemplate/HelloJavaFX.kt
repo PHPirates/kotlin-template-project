@@ -14,6 +14,7 @@ import javafx.stage.Stage
 class HelloJavaFX : Application() {
     /** height  */
     private val height = 250
+
     /** width  */
     private val width = 300
 

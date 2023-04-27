@@ -3,20 +3,20 @@ version = "0.0"
 
 plugins {
 
-    val kotlinVersion = "1.8.0"
+    val kotlinVersion = "1.8.20"
 
     application
     kotlin("jvm") version kotlinVersion
     java // Required by at least JUnit.
 
     // Plugin which checks for dependency updates with help/dependencyUpdates task.
-    id("com.github.ben-manes.versions") version "0.45.0"
+    id("com.github.ben-manes.versions") version "0.46.0"
 
     // Plugin which can update Gradle dependencies, use help/useLatestVersions
     id("se.patrikerdes.use-latest-versions") version "0.2.18"
 
     // Kotest (previously KotlinTest)
-    id("io.kotest.multiplatform") version "5.5.4"
+    id("io.kotest.multiplatform") version "5.6.1"
 
     // Test coverage
     jacoco
@@ -25,17 +25,17 @@ plugins {
     id("com.github.nbaztec.coveralls-jacoco") version "1.2.15"
 
     // New test coverage plugin
-    id("org.jetbrains.kotlinx.kover") version "0.7.0-ALPHA"
+    id("org.jetbrains.kotlinx.kover") version "0.7.0-Beta"
 
     // https://openjfx.io/openjfx-docs/#gradle
     id("org.openjfx.javafxplugin") version "0.0.13"
 
     // Linting
-    id("org.jlleitschuh.gradle.ktlint") version "11.1.0"
+    id("org.jlleitschuh.gradle.ktlint") version "11.3.2"
 }
 
 javafx {
-    version = "14"
+    version = "19"
     modules = listOf("javafx.controls")
 }
 
@@ -49,15 +49,15 @@ dependencies {
 //    implementation(kotlin("test-junit"))
 
     // JUnit 5
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.2")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.2")
-    testRuntimeOnly("org.junit.platform:junit-platform-console:1.9.2")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.3")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.3")
+    testRuntimeOnly("org.junit.platform:junit-platform-console:1.9.3")
 
     // Kotlintest
-    implementation("io.kotest:kotest-framework-engine:5.5.4")
-    implementation("io.kotest:kotest-assertions-core:5.5.4")
-    implementation("io.kotest:kotest-framework-engine-jvm:5.5.4")
-    implementation("io.kotest:kotest-runner-junit5-jvm:5.5.4")
+    implementation("io.kotest:kotest-framework-engine:5.6.1")
+    implementation("io.kotest:kotest-assertions-core:5.6.1")
+    implementation("io.kotest:kotest-framework-engine-jvm:5.6.1")
+    implementation("io.kotest:kotest-runner-junit5-jvm:5.6.1")
 
     // JavaFX tests using TestFX
     testImplementation("org.testfx:testfx-core:4.0.16-alpha")
@@ -93,4 +93,18 @@ tasks.test {
 
     // Always run tests even if nothing changed, for demonstration purposes
     dependsOn("cleanTest")
+}
+
+// https://github.com/ben-manes/gradle-versions-plugin
+fun isNonStable(version: String): Boolean {
+    val stableKeyword = listOf("RELEASE", "FINAL", "GA").any { version.toUpperCase().contains(it) }
+    val regex = "^[0-9,.v-]+(-r)?$".toRegex()
+    val isStable = stableKeyword || regex.matches(version)
+    return isStable.not()
+}
+
+tasks.dependencyUpdates {
+    rejectVersionIf {
+        isNonStable(candidate.version)
+    }
 }
