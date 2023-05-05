@@ -26,10 +26,7 @@ It makes use of
 There are tests using
 * kotlintest (will be run by Gradle since kotlintest 3)
 * JUnit 5
-* TestFX (for using JavaFX elements)
 * Spek 2
-
-This uses JavaFX via gradle, so you should not have to take the trouble of getting it installed together with Java.
 
 ## How to add Gradle to your existing project
 

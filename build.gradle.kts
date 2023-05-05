@@ -27,16 +27,8 @@ plugins {
     // New test coverage plugin
     id("org.jetbrains.kotlinx.kover") version "0.7.0-Beta"
 
-    // https://openjfx.io/openjfx-docs/#gradle
-    id("org.openjfx.javafxplugin") version "0.0.13"
-
     // Linting
     id("org.jlleitschuh.gradle.ktlint") version "11.3.2"
-}
-
-javafx {
-    version = "17"
-    modules = listOf("javafx.controls")
 }
 
 dependencies {
@@ -44,9 +36,6 @@ dependencies {
     implementation(kotlin("stdlib"))
     // Kotlin reflection.
     implementation(kotlin("reflect"))
-
-//    implementation(kotlin("test"))
-//    implementation(kotlin("test-junit"))
 
     // JUnit 5
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.3")
@@ -58,12 +47,6 @@ dependencies {
     implementation("io.kotest:kotest-assertions-core:5.6.1")
     implementation("io.kotest:kotest-framework-engine-jvm:5.6.1")
     implementation("io.kotest:kotest-runner-junit5-jvm:5.6.1")
-
-    // JavaFX tests using TestFX
-    testImplementation("org.testfx:testfx-core:4.0.16-alpha")
-    testImplementation("org.testfx:testfx-junit:4.0.15-alpha")
-    // Only needed for headless testing.
-//    testImplementation("org.testfx:openjfx-monocle:8u76-b04") // jdk-9+181 for Java 9
 
     // Spek
     testImplementation("org.spekframework.spek2:spek-dsl-jvm:2.0.19")
@@ -97,7 +80,7 @@ tasks.test {
 
 // https://github.com/ben-manes/gradle-versions-plugin
 fun isNonStable(version: String): Boolean {
-    val stableKeyword = listOf("RELEASE", "FINAL", "GA").any { version.toUpperCase().contains(it) }
+    val stableKeyword = listOf("RELEASE", "FINAL", "GA").any { version.uppercase().contains(it) }
     val regex = "^[0-9,.v-]+(-r)?$".toRegex()
     val isStable = stableKeyword || regex.matches(version)
     return isStable.not()
